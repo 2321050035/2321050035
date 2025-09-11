@@ -5,11 +5,13 @@ h2 {
   background-color: green;
 }
 .box1 {
+  margin: 100px 50px;
   background-color: red;
 }
 .box2 {
-  background-color: blue; /* 1 giá trị (cấch xunh quanh =giá trị đó)*/
-  /*4 giá trị trên phải dưới trái*/
+  background-color: blue; /* 1 giá trị (cách xung quanh = giá trị đó)*/
+  /*4 giá trị: trên -> phải -> dưới -> trái*/
+  /*2 giá trị: trên-dưới -> trái-phải*/
   margin: 50px 10px 100px 30px;
   width: 50%;
   /* auto căn khối ra giữa*/
@@ -18,4 +20,7 @@ h2 {
 }
 .box3 {
   background-color: aqua;
+  padding: 200px;
+  margin: 25px;
+  width: 25%;
 }

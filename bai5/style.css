@@ -1,0 +1,146 @@
+body {
+    margin: 0px;
+}
+
+
+h1 {
+    margin: 0px -185px;
+}
+
+nav {
+    background-color: #0c4ca3;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+li {
+    padding: 15px;
+}
+
+.border {
+    border-right: 1px solid grey;
+}
+
+.danhmuc-lienket {
+    color: white;
+    text-decoration: none;
+    font-family: Roboto, Arial, Tahoma;
+}
+.banner-qc {
+    display:flex;
+    justify-content: center;
+}
+.qc {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+header {
+    border-bottom: 15px solid #f1f1f2;
+}
+.title-box {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px 185px;
+      border-bottom: 1px solid #868585;
+    }
+
+    .tin-tuc a{
+      font-size: 25px;
+      font-weight: 25;
+      font-family: Roboto, Arial, Tahoma;
+      color: #0c4ca3;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .xem-them a{
+      font-size: 14px;
+      color: #868585;
+      text-decoration: none;
+    }
+
+    .nd {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+        margin: 0px 185px;
+        border-spacing: 50px;
+        gap: 20px;
+    }
+
+    .thong-tin {
+        list-style-type: square;
+        color: black;
+        display: block;
+        padding-left: 15px;
+    }
+
+    .thong-tin li {
+        font-size: smaller;
+        margin-bottom: -25px;
+        line-height: 1.2;
+}
+
+
+    .thong-tin li::marker {
+        color: #0c4ca3;
+        font-size: 15px;
+        display: list-item;
+        
+    }
+
+    .box-thong-bao {
+      background-color: #e9ebef;
+      display: flex;
+      border-bottom: 1px solid #868585;
+      width: 100%;
+      height: auto;
+      margin: 25px 0px;
+    }
+
+    .thong-bao a{
+      font-size: 25px;
+      font-weight: 25;
+      font-family: Roboto, Arial, Tahoma;
+      color: #0c4ca3;
+      text-decoration: underline;
+      text-underline-offset: 15px;
+      gap: 30px;
+      margin: 30px 185px;
+    }
+
+    .anh-thongbao {
+       margin: 85px -335px;    
+    }
+
+    .chi-tiet {
+        display: block;
+        margin: 75px 355px;
+        font-family: Roboto, Arial, Tahoma;
+    }
+
+    .sinh-vien {
+        margin: 30px 185px;
+        font-size: 25px;
+        display: flex;
+        border-bottom: 1px solid #868585;
+    }
+
+    .ttts a{
+        color:#0c4ca3;
+        text-decoration:underline;
+        text-underline-offset: 5px;
+    }
+    .nts a{
+        color:#0c4ca3;
+        text-decoration:underline;
+        text-underline-offset: 5px;
+        margin: 0px 30px;
+        font-size: 23px;
+    }
