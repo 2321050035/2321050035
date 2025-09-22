@@ -1,0 +1,115 @@
+/*
+1. Thuộc tính văn bản
+
+color : Màu chữ.
+
+font-size : Kích thước chữ.
+
+font-family : Kiểu chữ (Arial, Times New Roman...).
+
+font-weight : Độ đậm chữ (normal, bold, 100–900).
+
+font-style : Kiểu chữ (normal, italic).
+
+text-align : Căn lề (left, center, right, justify).
+
+text-decoration : Gạch chân, gạch ngang (underline, line-through, none).
+
+text-transform : Chữ hoa/thường (uppercase, lowercase, capitalize).
+
+letter-spacing : Khoảng cách giữa các ký tự.
+
+line-height : Chiều cao dòng.
+
+word-spacing : Khoảng cách giữa các từ.
+
+white-space : Xử lý khoảng trắng (nowrap, pre...).
+
+2. Thuộc tính màu sắc & nền
+
+background-color : Màu nền.
+
+background-image : Ảnh nền.
+
+background-repeat : Lặp ảnh nền (repeat, no-repeat, repeat-x, repeat-y).
+
+background-size : Kích thước nền (cover, contain, px, %).
+
+background-position : Vị trí nền (top, center, left, right).
+
+opacity : Độ mờ (0 → 1).
+
+3. Thuộc tính khối (Box Model)
+
+width : Chiều rộng.
+
+height : Chiều cao.
+
+max-width / min-width : Giới hạn chiều rộng.
+
+max-height / min-height : Giới hạn chiều cao.
+
+margin : Khoảng cách bên ngoài.
+
+padding : Khoảng cách bên trong.
+
+border : Viền (border: 1px solid black).
+
+border-radius : Bo góc.
+
+box-shadow : Đổ bóng cho khối.
+
+4. Thuộc tính hiển thị & vị trí
+
+display : Kiểu hiển thị (block, inline, flex, grid, none...).
+
+visibility : Hiển thị hay ẩn (visible, hidden).
+
+position : Định vị (static, relative, absolute, fixed, sticky).
+
+top, right, bottom, left : Canh vị trí khi dùng position.
+
+z-index : Lớp chồng (cao hơn sẽ nằm trên).
+
+overflow : Xử lý khi nội dung tràn (visible, hidden, scroll, auto).
+
+5. Thuộc tính Flexbox & Grid
+
+🔹 Flexbox:
+
+display: flex : Bật flexbox.
+
+flex-direction : Hướng (row, column, row-reverse...).
+
+justify-content : Canh ngang (flex-start, flex-end, center, space-between, space-around).
+
+align-items : Canh dọc (flex-start, center, stretch, baseline).
+
+flex-wrap : Xuống dòng (nowrap, wrap).
+
+gap : Khoảng cách giữa các item.
+
+🔹 Grid:
+
+display: grid : Bật grid.
+
+grid-template-columns : Chia cột.
+
+grid-template-rows : Chia hàng.
+
+grid-gap / gap : Khoảng cách ô lưới.
+
+grid-column / grid-row : Chiếm nhiều cột/hàng.
+
+6. Thuộc tính danh sách & bảng
+
+list-style-type : Kiểu ký hiệu danh sách (disc, square, none...).
+
+list-style-image : Hình ảnh thay bullet.
+
+border-collapse : Gộp viền bảng (collapse, separate).
+
+border-spacing : Khoảng cách giữa các ô.
+
+caption-side : Vị trí tiêu đề bảng (top, bottom).
+*/

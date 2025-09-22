@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <script>
+        //để viết chú thích js
+        document.writeln("hello world <br>");
+
+        //js dùng dấu + để nối chuỗi
+        let hoTen = "Pham Quoc Binh";
+        document.writeln(hoTen + "<br>");
+
+        //Hằng
+        const pi = 3.14;
+
+        let soThuNhat = 10;
+        let soThuHai = 5;
+        let ketQua = 0;
+        //+
+        ketQua = soThuNhat + soThuHai;
+        document.writeln(ketQua + "<br>");
+        //-
+        ketQua = soThuNhat - soThuHai;
+        document.writeln(ketQua + "<br>");
+        //*
+        ketQua = soThuNhat * soThuHai;
+        document.writeln(ketQua + "<br>");
+        // /
+        ketQua = soThuNhat / soThuHai;
+        document.writeln(ketQua + "<br>");
+        // %
+        ketQua = soThuNhat % soThuHai;
+        document.writeln(ketQua + "<br>");
+
+        // soThuNhat = soThuNhat + soThuHai
+        soThuNhat += soThuHai;
+        document.writeln(soThuNhat + "<br>");
+
+        let thongTinSinhVien = {
+            hoTen: "Pham Quoc Binh",
+            tuoi: 20,
+            gioiTinh: true,
+            lop: "Công nghệ thông tin k68",
+            diaChi: {
+                thanhPho: "Hà Nội",
+                quanHuyen: "Đông Anh",
+                soNha: 14
+            },
+        }
+
+        let diaChiQuocBinh = {
+            thanhPho: "Hà Nội",
+            quanHuyen: "Đông Anh",
+            soNha: 14
+        }
+
+        let namNay = 2025;
+
+        document.writeln("Xin chào "
+            + thongTinSinhVien.hoTen
+            + " lớp "
+            + thongTinSinhVien.lop
+            + " Số nhà: " +
+            thongTinSinhVien.diaChi.soNha
+            + " Huyện: " +
+            thongTinSinhVien.diaChi.quanHuyen
+            + " Năm sinh " + (namNay - thongTinSinhVien.tuoi + "<br>")
+        );
+    </script>
+</body>
+
+</html>

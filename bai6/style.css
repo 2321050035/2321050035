@@ -64,10 +64,19 @@ input {
     gap:5px;
     margin-top: 5px;
 }
+.chu-hiphop {
+    font-size: 12px;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+span {
+    color: #909090;
+}
 .box2 {
     background-color: #242424;
     width: 50%;
     border-radius: 8px;
+    color: white;
 }
 .pill-container {
     background-color: #242424;
@@ -111,8 +120,8 @@ input {
         border-radius: 5px;
     }
     .chu-broken {
-        padding: 17px 10px;
-        font-size: 13px;
+        padding: 18px 10px;
+        font-size: 12px;
         font-weight: 600;
     }
 
@@ -121,6 +130,11 @@ input {
         justify-content: center;
         gap: 5px;
         margin: 5px 0px;
+    }
+    .frame-box2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0 0 28px;
     }
 .box3 {
     background-color: #242424;

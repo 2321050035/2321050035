@@ -1,0 +1,53 @@
+body {
+    background-color: grey;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 80%;
+    height: 650px;
+    margin: auto;
+    margin-top: 35px;
+}
+.anh {
+    width: 50%;
+    height: 70%;
+}
+.login {
+    background-color: white;
+    width: 50%;
+    height: 85%;
+    position: flex-end;
+}
+.dau {
+    font-size: 50px;
+    margin-top: 70px;
+}
+.than {
+    margin-top: 50px;
+}
+input[type="text"] {
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  padding: 5px;
+  width: 400px;
+}
+.nhap {
+    color: #d7d4d4;
+}
+.chan {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2088e9;
+    width: 20%;
+    height: 50px;
+    color: white;
+    border-radius: 10px;
+}
+.finish {
+    text-align: center;
+}
