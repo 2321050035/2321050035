@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width>>, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let donHang = {
+            hoTen: "Pham Quoc Binh",
+            sdt: "0862861219",
+            thanhVien: true,
+            danhsachSanPham: {
+                sp1: {
+                    maSP: "BN001",
+                    tenSP: "Cà Phê",
+                    soLuong: "50",
+                    giaTien: "10000",
+                },
+                sp2: {
+                    maSP: "AN001",
+                    tenSP: "matcha",
+                    soLuong: "50",
+                    giaTien: "10000",
+                },
+
+                sp3: {
+                    maSP: "CN001",
+                    tenSP: "Trà Sữa",
+                    soLuong: "50",
+                    giaTien: "10000",
+                },
+            },
+            tranhthaitt: true,
+            diachi: "hanoi",
+        };
+        let tongTT =
+            donHang.danhsachSanPham.sp1.soLuong *
+            donHang.danhsachSanPham.sp1.giaTien +
+            donHang.danhsachSanPham.sp2.soLuong *
+            donHang.danhsachSanPham.sp2.giaTien +
+            donHang.danhsachSanPham.sp3.soLuong *
+            donHang.danhsachSanPham.sp3.giaTien;
+        document.writeln(" Tổng phải thanh toán :" + tongTT + "<br>");
+
+        //STRING
+        let hoTen = "Phạm Quốc Bình";
+        document.writeln(hoTen.length + "<br>");
+
+        let myString = "Hello Binh";
+        document.writeln(myString[4]);
+        document.writeln(myString.slice(1, 4));
+        document.writeln(myString.replace("Hello", "Hi"));
+        document.writeln(myString.toUpperCase());
+        document.writeln(myString.toLowerCase());
+        document.writeln(myString.toLocaleLowerCase());
+        document.writeln(myString.indexOf("e"));
+        document.writeln(myString.includes("a"));
+
+        //tách chuỗi thành mảng
+        document.writeln(myString.split(""));
+        document.writeln(myString.split(" "));
+        document.writeln(myString.split("o"));
+        document.writeln(myString.startsWith("He"));
+        //NUMBER
+        document.writeln(isNaN(10));
+        
+        let toDay = new Date();
+        //lấy ra năm
+        document.writeln(toDay.getFullYear());
+        //lấy ra tháng
+        document.writeln(toDay.getMonth() + 1);
+        //lấy ra ngày
+        document.writeln(toDay.getDate());
+        //lấy ra giờ
+        document.writeln(toDay.getHours());
+        //lấy ra phút
+        document.writeln(toDay.getMinutes());
+        //lấy ra giây
+        document.writeln(toDay.getSeconds());
+
+    </script>
+</body>
+
+</html>
