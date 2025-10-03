@@ -48,25 +48,25 @@
 
         //STRING
         let hoTen = "Phạm Quốc Bình";
-        document.writeln(hoTen.length + "<br>");
+        document.writeln(hoTen.length + "<br>"); // độ dài chuỗi
 
         let myString = "Hello Binh";
-        document.writeln(myString[4]);
-        document.writeln(myString.slice(1, 4));
-        document.writeln(myString.replace("Hello", "Hi"));
-        document.writeln(myString.toUpperCase());
-        document.writeln(myString.toLowerCase());
-        document.writeln(myString.toLocaleLowerCase());
-        document.writeln(myString.indexOf("e"));
-        document.writeln(myString.includes("a"));
+        document.writeln(myString[4]); //lấy ký tự tại vị trí 4
+        document.writeln(myString.slice(1, 4)); //cắt chuỗi từ vị trí 1 đến vị trí 4
+        document.writeln(myString.replace("Hello", "Hi")); //thay thế chuỗi
+        document.writeln(myString.toUpperCase()); //chuyển đổi thành chữ hoa
+        document.writeln(myString.toLowerCase()); //chuyển đổi thành chữ thường
+        document.writeln(myString.toLocaleLowerCase()); //chuyển đổi thành chữ thường theo ngôn ngữ địa phương
+        document.writeln(myString.indexOf("e")); //lấy vị trí của ký tự "e"
+        document.writeln(myString.includes("a")); //kiểm tra xem chuỗi có chứa ký tự "a" hay không
 
         //tách chuỗi thành mảng
-        document.writeln(myString.split(""));
-        document.writeln(myString.split(" "));
-        document.writeln(myString.split("o"));
-        document.writeln(myString.startsWith("He"));
+        document.writeln(myString.split("")); // mỗi ký tự
+        document.writeln(myString.split(" ")); // theo khoảng trắng
+        document.writeln(myString.split("o")); // theo chữ 'o'
+        document.writeln(myString.startsWith("He")); // chuỗi có bắt đầu bằng "He" không 
         //NUMBER
-        document.writeln(isNaN(10));
+        document.writeln(isNaN(10)); //kiểm tra xem có phải số không // false (vì 10 là số)
         
         let toDay = new Date();
         //lấy ra năm

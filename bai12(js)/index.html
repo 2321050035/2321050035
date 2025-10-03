@@ -15,14 +15,14 @@
         let thongTin = {
             ten: ten
         }
-        document.writeln(typeof (arr) + "<br>");
-        document.writeln(Array.isArray(arr) + "<br>");
-        document.writeln(arr.length + "<br>");
-        document.writeln(arr[0] + "<br>");
-        document.writeln(arr.indexOf(4) + "<br>");
-        document.writeln(arr.lastIndexOf(3) + "<br>");
+        document.writeln(typeof (arr) + "<br>"); //kiểu dữ liệu của arr là object
+        document.writeln(Array.isArray(arr) + "<br>"); //kiểm tra arr có phải là mảng hay không
+        document.writeln(arr.length + "<br>"); //độ dài của mảng
+        document.writeln(arr[0] + "<br>"); //lấy phần tử đầu tiên của mảng
+        document.writeln(arr.indexOf(4) + "<br>"); //lấy vị trí của phần tử 4
+        document.writeln(arr.lastIndexOf(3) + "<br>"); //lấy vị trí cuối cùng của phần tử 3
 
-        arr[3] = 6;
+        arr[3] = 6; //thay đổi giá trị của phần tử tại vị trí 3 thành 6
         document.writeln(arr + "<br>");
 
         /*let a, b, c, d;
@@ -45,6 +45,14 @@
         d.unshift("JS");
         document.writeln(d + "<br>");*/
 
+        /*push() / pop(): thêm / xóa cuối mảng
+
+          shift() / unshift(): xóa / thêm đầu mảng
+
+          concat() / join(): nối mảng
+
+          reverse(): đảo ngược mảng*/
+
         let so = 10;
         if (so % 2 == 0) {
             document.writeln(so + " là số chẵn" + "<br>");
@@ -66,10 +74,10 @@
             document.writeln("Chào buổi đêm" + "<br>");
         }
 
-        
+
         a = 5;
         b = 10;
-        c = 8;
+        c = -6;
         let tong = a * 0.6 + b * 0.3 + c * 0.1;
         document.writeln("Tổng điểm: " + tong + "<br>");
         if (tong >= 8 && tong <= 10) {
@@ -80,6 +88,8 @@
             document.writeln("C" + "<br>");
         } else if (tong >= 4 && tong < 5) {
             document.writeln("D" + "<br>");
+        } else if (a < 0 || b < 0 || c < 0 || a > 10 || b > 10 || c > 10) {
+            document.writeln("Nhập sai điểm" + "<br>");
         } else {
             document.writeln("F" + "<br>");
         }
