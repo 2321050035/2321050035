@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính chỉ số BMI</h1>
+    <h3>Công thức Cân nặng / (chiều cao * chiều cao)</h3>
+    <div>
+        <p>Nhập chiều cao:</p>
+        <input type="number" id="chieuCao">
+    </div>
+    <div>
+        <p>Nhập cân nặng:</p>
+        <input type="number" id="canNang">
+    </div>
+    <div>
+        <button onclick="tinhBMI()">Tính chỉ số BMI</button>
+    </div>
+    <div>
+        <p id="ketQua"></p>
+    </div>
+    <script>
+        function tinhBMI() {
+            let chieuCao = parseFloat(document.getElementById("chieuCao").value);
+            let canNang = parseFloat(document.getElementById("canNang").value);
+            let canhBao = "";
+            if (!canNang) {
+                canhBao += "Vui lòng nhập cân nặng.\n";
+            }
+            if (!chieuCao) {
+                canhBao += "Vui lòng nhập chiều cao.\n";
+            }
+            if (canhBao) {
+                alert(canhBao);
+                return;
+            }
+            let bmi = canNang / (chieuCao * chieuCao);
+            document.getElementById("ketQua").innerText = "Chỉ số BMI của bạn là: " + bmi.toFixed(4);
+        }
+    </script>
+</body>
+</html>
