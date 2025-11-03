@@ -1,26 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            background-color: bisque;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 100px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Tính chỉ số BMI</h1>
-    <h3>Công thức Cân nặng / (chiều cao * chiều cao)</h3>
-    <div>
-        <p>Nhập chiều cao:</p>
-        <input type="number" id="chieuCao">
-    </div>
-    <div>
-        <p>Nhập cân nặng:</p>
-        <input type="number" id="canNang">
-    </div>
-    <div>
-        <button onclick="tinhBMI()">Tính chỉ số BMI</button>
-    </div>
-    <div>
-        <p id="ketQua"></p>
+    <div class="container">
+        <h1>Tính chỉ số BMI</h1>
+        <h3>Công thức Cân nặng / (chiều cao * chiều cao)</h3>
+        <div>
+            <p>Nhập chiều cao:</p>
+            <input type="number" id="chieuCao">
+        </div>
+        <div>
+            <p>Nhập cân nặng:</p>
+            <input type="number" id="canNang">
+        </div>
+        <div>
+            <button onclick="tinhBMI()">Tính chỉ số BMI</button>
+        </div>
+        <div>
+            <p id="ketQua"></p>
+            <img id="anhBMI" src="" alt="Kết quả BMI" width="250">
+        </div>
     </div>
     <script>
         function tinhBMI() {
@@ -38,8 +57,25 @@
                 return;
             }
             let bmi = canNang / (chieuCao * chieuCao);
-            document.getElementById("ketQua").innerText = "Chỉ số BMI của bạn là: " + bmi.toFixed(4);
+            document.getElementById("ketQua").innerText = "Chỉ số BMI của bạn là: " + bmi.toFixed(2);
+            let img = document.getElementById("anhBMI");
+
+            if (bmi < 18.5 && bmi > 0) {
+                img.src = "thieucan.png";
+            } else if (bmi < 24.9 && bmi >= 18.5) {
+                img.src = "binhthuong.png";
+            } else if (bmi < 29.9 && bmi >= 25) {
+                img.src = "thuacan.png";
+            } else if (bmi < 39.9 && bmi >= 30) {
+                img.src = "beophi1-2.png";
+            } else if (bmi > 39.9) {
+                img.src = "beophi.png";
+            }
+            else {
+                document.getElementById("ketQua").innerText = "Vui lòng nhập giá trị hợp lệ.";
+            }
         }
     </script>
 </body>
+
 </html>

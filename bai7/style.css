@@ -49,3 +49,8 @@ main {
     justify-content: center;
     gap: 20px;
 }
+.phim-hang2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}

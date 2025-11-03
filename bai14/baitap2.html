@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     <h1>Tính toán</h1>
+    <h1>Tính toán</h1>
     <div>
         <p>Nhập số thứ nhất:</p>
         <input type="number" id="soThuNhat">
@@ -16,16 +18,16 @@
         <input type="number" id="soThuHai">
     </div>
     <div>
-    <button onclick="tinhToan()">Tính tổng</button>
+        <button onclick="tinhToan('cong')">Tính tổng</button>
     </div>
     <div>
-    <button onclick="tinhToan()">Tính hiệu</button>
+        <button onclick="tinhToan('tru')">Tính hiệu</button>
     </div>
     <div>
-    <button onclick="tinhToan()">Tính tích</button>
+        <button onclick="tinhToan('nhan')">Tính tích</button>
     </div>
     <div>
-    <button onclick="tinhToan()">Tính thương</button>
+        <button onclick="tinhToan('chia')">Tính thương</button>
     </div>
     <div>
         Kết quả: <input type="number" id="ketQua" class="ket-qua">
@@ -36,7 +38,7 @@
             let soThuNhat = parseFloat(document.getElementById("soThuNhat").value);
             let soThuHai = parseFloat(document.getElementById("soThuHai").value);
             let canhBao = "";
-            let ketQua=0;
+            let ketQua = 0;
             if (!soThuNhat) {
                 canhBao += "Vui lòng nhập số thứ nhất.\n";
             }
@@ -47,9 +49,45 @@
                 alert(canhBao);
                 return;
             }
-            let tong = soThuNhat + soThuHai;
-            document.getElementById("ketQua").value = tong;
+            switch (phepTinh) {
+                case 'cong':
+                    ketQua = soThuNhat + soThuHai;
+                    break;
+                case 'tru':
+                    ketQua = soThuNhat - soThuHai;
+                    break;
+                case 'nhan':
+                    ketQua = soThuNhat * soThuHai;
+                    break;
+                case 'chia':
+                    if (soThuHai === 0) {
+                        alert("Không thể chia cho 0!");
+                        return;
+                    }
+                    ketQua = soThuNhat / soThuHai;
+                    break;
+            }
+            /*if (phepTinh === 'cong') {
+                ketQua = soThuNhat + soThuHai;
+            }
+            else if (phepTinh === 'tru') {
+                ketQua = soThuNhat - soThuHai;
+            }
+            else if (phepTinh === 'nhan') {
+                ketQua = soThuNhat * soThuHai;
+            }
+            else if (phepTinh === 'chia') {
+                if (soThuHai === 0) {
+                    alert("Không thể chia cho 0!");
+                    return;
+                }
+                ketQua = soThuNhat / soThuHai;
+            }
+                */
+
+            document.getElementById("ketQua").value = ketQua;
         }
     </script>
 </body>
+
 </html>
