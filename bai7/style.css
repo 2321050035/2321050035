@@ -1,26 +1,23 @@
 body {
-    background-color: grey;
     margin: 0;
+    background-color: #222;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
+/* HEADER */
 header {
     background-color: black;
-    width: 100%;
-    height: 10vh;
+    height: 60px;
+    display: flex;
+    align-items: center;
 }
 
-.container {
-    width: 70%;
-    margin: auto;
-}
-
-ul {
+.container ul {
     display: flex;
     list-style: none;
-    /* gap: 20px; */
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 li {
@@ -32,25 +29,88 @@ a {
     text-decoration: none;
 }
 
+/* BANNER */
+#banner {
+    height: 300px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+    padding: 20px;
+    position: relative;
+    transition: background-image 0.5s;
+}
 
-main {
-    width: 70%;
-    background-color: black;
-    height: 1000px;
-    margin: auto;
+.banner-content {
+    background-color: rgba(0,0,0,0.6);
+    padding: 15px;
+    border-radius: 10px;
 }
-main {
-    display: block;
-    unicode-bidi: isolate;
-    overflow: scroll;
+
+#playButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.phim-hang1 {
+
+/* DANH SÁCH PHIM */
+main {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.danh-sach-phim {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.phim-hang2 {
-    display: flex;
+
+.phim {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.phim:hover {
+    transform: scale(1.05);
+}
+
+.phim img {
+    width: 180px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* TRAILER BOX */
+#trailerBox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.9);
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+}
+
+#trailerBox iframe {
+    width: 80%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+#closeTrailer {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
 }

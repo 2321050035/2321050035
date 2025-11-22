@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,85 +7,52 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- THANH MENU -->
     <header>
         <div class="container">
-            <nav>
-                <ul>
-                    <li>
-                        <img src alt>
-                    </li>
-                    <li>
-                        <a href="#">Trang chủ</a>
-                    </li>
-                    <li>
-                        <a href="#">Truyền hình </a>
-                    </li>
-                    <li>
-                        <a href="#">Phim bộ</a>
-                    </li>
-                    <li>
-                        <a href="#">V.League</a>
-                    </li>
-                    <li>
-                        <a href="#">Thiếu nhi</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="chucnang"></div>
+            <ul>
+                <li><img src="logo.png" alt="FPT Play" width="50"></li>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Phim bộ</a></li>
+                <li><a href="#">Thiếu nhi</a></li>
+            </ul>
         </div>
     </header>
-    <main>
-        <div class="hang1">
-            <div class="phim-hang1">
-                <div class="phim">
-                <img src="nguoidepvaquaivat.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="conan.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="mai.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="kungfupanda.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="keanhon.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-            </div>
+
+    <!-- BANNER -->
+    <div id="banner">
+        <div class="banner-content">
+            <h2>Chọn một bộ phim để xem</h2>
+            <p>Phim chiếu rạp, hoạt hình, hành động, lãng mạn...</p>
+            <button id="playButton" onclick="xemTrailer()">▶ Play Trailer</button>
         </div>
-        <div class="hang2">
-            <div class="phim-hang2">
-                <div class="phim">
-                <img src="texac.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="toys.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="vongnhi.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="nemo.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
-                <div class="phim">
-                <img src="walle.jpg" alt="">
-                <div>Người Đẹp Và Quái Vật</div>
-                </div>
+    </div>
+
+    <!-- DANH SÁCH PHIM -->
+    <main>
+        <div class="danh-sach-phim">
+            <div class="phim" onclick="chonPhim(1)">
+                <img src="nemo.jpg" alt="Mưa đỏ">
+                <p>Mưa đỏ</p>
+            </div>
+            <div class="phim" onclick="chonPhim(2)">
+                <img src="conan.jpg" alt="Conan">
+                <p>Conan</p>
+            </div>
+            <div class="phim" onclick="chonPhim(3)">
+                <img src="nguoidepvaquaivat.jpg" alt="Người đẹp và quái vật">
+                <p>Người đẹp và quái vật</p>
             </div>
         </div>
     </main>
-    <footer>
-        <script src="script.js"></script>
-    </footer>
+
+    <!-- HỘP XEM TRAILER -->
+    <div id="trailerBox">
+        <span id="closeTrailer" onclick="dongTrailer()">×</span>
+        <iframe id="trailerVideo" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+

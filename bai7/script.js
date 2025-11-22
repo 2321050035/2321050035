@@ -1,44 +1,67 @@
+// ===== DANH SÁCH PHIM =====
 let danhSachPhim = [
     {
         id: 1,
         tenPhim: "Mưa đỏ",
         namPhatHanh: 2025,
-        tuoi: 16,
-        thoiLuong: 2,
         quocGia: "Việt Nam",
-        poster: "bai7/images/muado.jpg",
-        theLoai: "Phim chiếu rạp"
+        theLoai: "Phim chiếu rạp",
+        banner: "bongdungtrungso.jpg",
+        trailer: "https://www.youtube.com/embed/BD6PoZJdt_M"
     },
     {
         id: 2,
         tenPhim: "Conan",
         namPhatHanh: 2023,
-        tuoi: 10,
-        thoiLuong: 1.5,
         quocGia: "Nhật Bản",
-        poster: "bai7/images/conan.jpg",
-        theLoai: "Phim hoạt hình"
+        theLoai: "Phim hoạt hình",
+        banner: "deptraithaysaisai.jpg",
+        trailer: "https://www.youtube.com/embed/dz5mN-iIC4g"
     },
     {
         id: 3,
         tenPhim: "Người đẹp và quái vật",
         namPhatHanh: 2015,
-        tuoi: 13,
-        thoiLuong: 2.5,
         quocGia: "Mỹ",
-        poster: "bai7/images/nguoidepvaquaivat.jpg",
-        theLoai: "Phim chiếu rạp"
+        theLoai: "Phim chiếu rạp",
+        banner: "cam.jpg",
+        trailer: "https://www.youtube.com/embed/o6k1ChY8kDg"
     }
 ];
 
-let phimHienTai = danhSachPhim[0];
+// ===== LẤY PHẦN TỬ HTML =====
+let banner = document.getElementById("banner");
+let trailerBox = document.getElementById("trailerBox");
+let trailerVideo = document.getElementById("trailerVideo");
+let phimDangChon = null;
 
-let banner = document.getElementById('banner')[0];
-
-function chonPhim(idPhim){
-    for(let i = 0; i < danhSachPhim.length; i++){
-        if(danhSachPhim[i].id === idPhim){
-            banner.style.backgroundImage = danhSachPhim[i].poster;
-        }
+// ===== HÀM CHỌN PHIM =====
+function chonPhim(idPhim) {
+    let phim = danhSachPhim.find(p => p.id === idPhim);
+    if (phim) {
+        phimDangChon = phim;
+        banner.style.backgroundImage = "url('" + phim.banner + "')";
+        banner.innerHTML = `
+            <div class="banner-content">
+                <h2>${phim.tenPhim}</h2>
+                <p>${phim.theLoai} | ${phim.namPhatHanh} | ${phim.quocGia}</p>
+                <button id="playButton" onclick="xemTrailer()">▶ Play Trailer</button>
+            </div>
+        `;
     }
 }
+
+// ===== HÀM XEM TRAILER =====
+function xemTrailer() {
+    if (phimDangChon) {
+        trailerBox.style.display = "flex";
+        trailerVideo.src = phimDangChon.trailer + "?autoplay=1";
+    }
+}
+
+// ===== HÀM ĐÓNG TRAILER =====
+function dongTrailer() {
+    trailerBox.style.display = "none";
+    trailerVideo.src = "";
+}
+
