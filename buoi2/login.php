@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login.php</title>
+</head>
+<body>
+
+    <form action="login.php" method="Post">
+        <div>
+            <input type="text" name="username" placeholder="Tên đăng nhập">
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Mật khẩu">
+        </div>
+        <div>
+            <input type="submit" value="Đăng nhập">
+        </div>
+    </form>
+
+    <?php
+        if(isset($_POST['username']) && isset($_POST['password'])) {
+            $tenDangNhap = $_POST['username'];
+            $matKhau = $_POST['password'];
+
+            // Nếu tên đăng nhập là admin
+            // Mật khẩu là 123 thì cho phép người dùng vào trang chủ
+
+            echo $tenDangNhap . " " . $matKhau;
+
+            if($tenDangNhap == "admin" && $matKhau == "123") {
+                session_start();
+                $_SESSION['username'] = $tenDangNhap;
+                header("Location: trangchu.php");
+            } else {
+                echo "<p class='warning'>Sai thông tin đăng nhập</p>";
+            }
+        }
+    ?>
+
+</body>
+</html>

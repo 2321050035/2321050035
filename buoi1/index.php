@@ -89,6 +89,51 @@
     #xóa
     unset($mang[3]);
     print_r($mang);
+
+    #Sắp xếp mảng
+    $mang = ["C","B","D","A"];
+    print_r($mang);
+    echo "<br>";
+    #sắp xếp tăng
+    sort($mang);
+    print_r($mang);
+    #sắp xếp giảm
+    echo "<br>";
+    rsort($mang);
+    print_r($mang);
+
+    //11. Kiểm tra xem biến có tồn tại hay ko
+    $bienA = "hello";
+    isset($bienA); // true
+    isset($bienB); // false
+
+    if(isset($bienA)) {
+        echo "<br> Biến A tồn tại";
+    } else {
+        echo "<br> Biến A không tồn tại";
+    }
+
+    //check empty
+    $check = "a";
+    if(empty($check)) {
+        echo "empty";
+    } else {
+        echo "not empty";
+    }
+
+    //12. Hàm
+    #không tham số
+        function xinchao(){
+            return"hello";
+        }
+        echo xinchao();
+
+        #có tham số
+        echo "<br>";
+        function xinchao2($ten){
+            return"hello". $ten;
+        }
+        echo xinchao2("Anh");
     ?>
 </body>
 
